@@ -6,7 +6,7 @@ import { readFile, writeFile } from 'node:fs/promises';
 
 const dev = process.env.NODE_ENV !== 'production';
 const hostname = 'localhost';
-const port = Number(process.env.PORT) || 3000;
+const port = 3000;
 // when using middleware `hostname` and `port` must be provided below
 const app = next({ dev, hostname, port, turbo: true });
 const handler = app.getRequestHandler();
