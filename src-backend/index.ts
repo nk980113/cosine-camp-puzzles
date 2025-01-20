@@ -5,7 +5,7 @@ import type { ClientToServer, ServerToClient, SocketData } from '../shared/event
 import { readFile, writeFile } from 'node:fs/promises';
 
 const dev = process.env.NODE_ENV !== 'production';
-const hostname = 'localhost';
+const hostname = '0.0.0.0';
 const port = 3000;
 // when using middleware `hostname` and `port` must be provided below
 const app = next({ dev, hostname, port, turbo: true });
