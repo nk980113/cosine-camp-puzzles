@@ -1,0 +1,31 @@
+{
+  "name": "cosine-camp-puzzles",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev:run": "node --watch-path=./dist dist/index.js",
+    "dev:build": "tsup --watch",
+    "dev": "concurrently npm:dev:*",
+    "build": "next build && tsup",
+    "start": "NODE_ENV=production node dist/index.js",
+    "tsup": "tsup"
+  },
+  "dependencies": {
+    "next": "15.1.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "concurrently": "^9.1.2",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "tsup": "^8.3.5",
+    "typescript": "^5"
+  }
+}
