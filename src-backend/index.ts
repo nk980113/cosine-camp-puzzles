@@ -129,7 +129,7 @@ app.prepare().then(() => {
                 const acc = leaderboardData.find(([t]) => t === socket.data.name);
                 if (acc) {
                     acc[1] = lv;
-                    leaderboardData.sort(([, s1], [, s2]) => s1 - s2);
+                    leaderboardData.sort(([, s1], [, s2]) => s2 - s1);
                     io.to('leaderboard').emit('leaderboardUpdate', leaderboardData);
                     io.to(socket.data.token!).emit('levelUp', eventData[socket.data.token!] as any);
                 }
