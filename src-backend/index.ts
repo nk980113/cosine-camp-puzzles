@@ -36,7 +36,7 @@ app.prepare().then(() => {
 
     io.on('connection', (socket) => {
         socket.emit('status', eventStatus);
-        
+
         socket.on('login', (token, cb) => {
             socket.data.token = token;
             socket.join(token);
@@ -97,7 +97,7 @@ app.prepare().then(() => {
                     eventStatus = 2;
                     io.emit('status', eventStatus);
                     readyList = new Set;
-                }, 300_000).unref();
+                }, 2_400_000).unref();
             }
         });
 
