@@ -3,6 +3,7 @@ import './globals.css';
 import Navbar from '@/components/Navbar';
 import AccountContextProvider from '@/components/AccountContextProvider';
 import SocketHandler from '@/components/SocketHandler';
+import EventStatusContextProvider from '@/components/EventStatusContextProvider';
 
 export const metadata: Metadata = {
     title: 'Cosine不建人解謎活動',
@@ -18,11 +19,13 @@ export default function RootLayout({
         <html lang='zh-TW'>
             <body className='bg-sky-100 h-screen'>
                 <AccountContextProvider>
-                    <SocketHandler />
-                    <Navbar />
-                    <div className='content-center flex flex-col flex-wrap'>
-                        {children}
-                    </div> 
+                    <EventStatusContextProvider>
+                        <SocketHandler />
+                        <Navbar />
+                        <div className='content-center flex flex-col flex-wrap p-8'>
+                            {children}
+                        </div>
+                    </EventStatusContextProvider>
                 </AccountContextProvider>
             </body>
         </html>

@@ -1,3 +1,4 @@
+import Leaderboard from '@/components/Leaderboard';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 
@@ -8,5 +9,5 @@ export default async function Home() {
         redirect('/event');
     }
 
-    return null;
+    return <Leaderboard />;
 }

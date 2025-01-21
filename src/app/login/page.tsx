@@ -6,7 +6,7 @@ import useAccountData from '@/hooks/useAccountData';
 import { useActionState } from 'react';
 
 export default function Login() {
-    const [_, setAccountData] = useAccountData();
+    const [, setAccountData] = useAccountData();
     const [display, action, pending] = useActionState<React.ReactNode, FormData>(async (_: any, formData: FormData) => {
         const token = await getTokenByNameAndPassword(formData);
         if (token) {
@@ -19,7 +19,7 @@ export default function Login() {
         return <div className='text-red-400 flex place-content-center'>組別或密碼錯誤</div>;
     }, null);
     return <div className='min-h-[600px] flex flex-col place-content-center'>
-        <form action={action} className='flex flex-col w-60 space-y-5 *:text-xl [&>input]:border-solid [&>input]:border-[1px] [&>input]:border-blue-900 [&>input]:rounded-md [&>input]:p-1'>
+        <form action={action} className='flex flex-col w-60 space-y-5 *:text-xl'>
             <input placeholder='組別' name='team' required />
             <input placeholder='密碼' name='key' required />
             <button disabled={pending}>登入</button>
