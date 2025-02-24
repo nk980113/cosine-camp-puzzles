@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cosine不建人解謎活動
 
-## Getting Started
+此網頁是為cosine不建人推理解謎課程設計的互動網站。
 
-First, run the development server:
+花了總共大概三天時間速通的網站。
 
-```bash
+bug非常多，但我根本沒時間找出所有bug。裡面的bug大概有一半是feature。
+
+# 使用方式
+
+## 後端架設
+
+測試使用
+
+```sh
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+部署時build使用`npm run build`，啟動指令設定`npm start`。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 頁面使用
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+測試使用的網址0.0.0.0:3000，若使用區域網路連線port也為3000。
 
-## Learn More
+啟動後在主控台會有一組admin password，打開網頁後右上角登入使用帳號admin以及剛剛取得的密碼。管理員可以新增帳戶、開始活動、在活動結束時離開結算狀態。
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+一般帳戶可使用的功能為顯然。
